@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detail_products",
+  "info": {
+    "singularName": "detail-product",
+    "pluralName": "detail-products",
+    "displayName": "Detail Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "detail_product"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
